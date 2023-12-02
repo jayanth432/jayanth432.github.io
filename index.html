@@ -71,29 +71,50 @@
             max-width: 100%;
             height: auto;
         }
+
+        .features {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
     </style>
-    <title>Advertisement Page</title>
+    <title>New BMW Car Advertisement</title>
 </head>
 <body>
 
     <header>
-        <h1>Awesome Product Advertisement</h1>
+        <h1>Explore the New BMW X7</h1>
     </header>
 
     <nav>
-        <a href="#section1">Section 1</a>
-        <a href="#section2">Section 2</a>
-        <a href="#section3">Section 3</a>
+        <a href="#overview">Overview</a>
+        <a href="#video">Watch Video</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact Us</a>
     </nav>
 
-    <section id="section1">
-        <h2>Welcome to Section 1</h2>
-        <p>This is an amazing product that will change your life!</p>
+    <section id="overview">
+        <h2>Discover the BMW X7</h2>
+        <p>Experience luxury and performance like never before with the all-new BMW X7.</p>
         <a href="#" class="button">Learn More</a>
     </section>
 
-    <section id="section2">
-        <h2>Check Out Our Video</h2>
+    <section id="video">
+        <h2>Watch the Unveiling Video</h2>
         <div class="video-container">
             <!-- Replace the source with your actual video URL -->
             <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
@@ -101,13 +122,42 @@
         <a href="#" class="button">Watch Now</a>
     </section>
 
-    <section id="section3">
-        <h2>Amazing Images</h2>
+    <section id="features">
+        <h2>Key Features</h2>
         <div class="image-container">
             <!-- Replace the source with your actual image URL -->
-            <img src="https://via.placeholder.com/800x400" alt="Product Image">
+            <img src="https://via.placeholder.com/800x400" alt="BMW X7 Image">
+        </div>
+        <div class="features">
+            <h3>Performance</h3>
+            <p>Experience powerful performance with the X7's advanced engine technology.</p>
+
+            <h3>Luxury Interior</h3>
+            <p>Indulge in the luxurious interior crafted with premium materials and cutting-edge design.</p>
+
+            <h3>Advanced Technology</h3>
+            <p>Stay connected and in control with the latest technology features, including a state-of-the-art infotainment system.</p>
         </div>
         <a href="#" class="button">View Gallery</a>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Interested in the BMW X7? Contact us for more information.</p>
+        <div class="contact-form">
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="button">Submit</button>
+            </form>
+        </div>
     </section>
 
 </body>
