@@ -32,28 +32,11 @@
             margin: 5px;
             border-radius: 5px;
             background-color: #555;
+            cursor: pointer;
         }
 
         section {
             padding: 20px;
-        }
-
-        .product {
-            border: 1px solid #ddd;
-            background-color: white;
-            padding: 15px;
-            margin: 10px;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .product img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .product h3 {
-            margin-top: 0;
         }
 
         .filter-container {
@@ -76,6 +59,34 @@
             border-radius: 5px;
             border: 1px solid #ddd;
             box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            background-color: white;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product h3 {
+            margin-top: 0;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
         }
 
@@ -118,7 +129,7 @@
             <h3>Product 1</h3>
             <p>Description of Product 1.</p>
             <p>Price: $50.00</p>
-            <button>Add to Cart</button>
+            <button class="button">Add to Cart</button>
         </div>
 
         <div class="product">
@@ -126,7 +137,7 @@
             <h3>Product 2</h3>
             <p>Description of Product 2.</p>
             <p>Price: $75.00</p>
-            <button>Add to Cart</button>
+            <button class="button">Add to Cart</button>
         </div>
 
         <!-- Add more products as needed -->
