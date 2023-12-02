@@ -39,49 +39,49 @@
             padding: 20px;
         }
 
-        .filter-container {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
+        .chat-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
         }
 
-        .search-bar {
-            width: 70%;
+        .chat-messages {
+            height: 300px;
+            overflow-y: scroll;
             padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            box-sizing: border-box;
+            background-color: #fff;
         }
 
-        .sort-dropdown {
-            width: 20%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            box-sizing: border-box;
-            cursor: pointer;
+        .message {
+            margin-bottom: 10px;
         }
 
-        .product {
-            border: 1px solid #ddd;
-            background-color: white;
-            padding: 15px;
-            margin: 10px;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
+        .message span {
+            font-weight: bold;
         }
 
-        .product img {
+        .message img {
             max-width: 100%;
             height: auto;
+            border-radius: 5px;
+            margin-top: 5px;
         }
 
-        .product h3 {
-            margin-top: 0;
+        .input-container {
+            display: flex;
+            margin-top: 10px;
         }
 
-        .button {
+        .message-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .send-button {
             background-color: #4CAF50;
             color: white;
             padding: 10px;
@@ -100,53 +100,57 @@
             width: 100%;
         }
     </style>
-    <title>E-commerce Shopping Site</title>
+    <title>Real-Time Chat Application</title>
 </head>
 <body>
 
     <header>
-        <h1>My E-commerce Store</h1>
+        <h1>Real-Time Chat Application</h1>
     </header>
 
     <nav>
         <a href="#">Home</a>
-        <a href="#">Products</a>
-        <a href="#">Contact</a>
+        <a href="#">Chat</a>
+        <a href="#">About</a>
     </nav>
 
     <section>
-        <div class="filter-container">
-            <input type="text" class="search-bar" placeholder="Search products...">
-            <select class="sort-dropdown">
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="newest">Newest Arrivals</option>
-            </select>
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <!-- Chat messages will appear here -->
+            </div>
+            <div class="input-container">
+                <input type="text" class="message-input" id="messageInput" placeholder="Type your message...">
+                <button class="send-button" onclick="sendMessage()">Send</button>
+            </div>
         </div>
-
-        <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Product Image">
-            <h3>Product 1</h3>
-            <p>Description of Product 1.</p>
-            <p>Price: $50.00</p>
-            <button class="button">Add to Cart</button>
-        </div>
-
-        <div class="product">
-            <img src="https://via.placeholder.com/200" alt="Product Image">
-            <h3>Product 2</h3>
-            <p>Description of Product 2.</p>
-            <p>Price: $75.00</p>
-            <button class="button">Add to Cart</button>
-        </div>
-
-        <!-- Add more products as needed -->
-
     </section>
 
     <footer>
-        &copy; 2023 My E-commerce Store. All rights reserved.
+        &copy; 2023 Real-Time Chat Application. All rights reserved.
     </footer>
+
+    <script>
+        function sendMessage() {
+            const messageInput = document.getElementById('messageInput');
+            const chatMessages = document.getElementById('chatMessages');
+
+            const message = messageInput.value.trim();
+
+            if (message !== '') {
+                const newMessage = document.createElement('div');
+                newMessage.classList.add('message');
+                newMessage.innerHTML = `<span>User:</span> ${message}`;
+                chatMessages.appendChild(newMessage);
+
+                // Clear the input field after sending the message
+                messageInput.value = '';
+
+                // Scroll to the bottom to show the latest message
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        }
+    </script>
 
 </body>
 </html>
